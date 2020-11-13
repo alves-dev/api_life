@@ -1,6 +1,6 @@
 package com.api_life.webflux.services;
 
-import com.api_life.webflux.document.*;
+import com.api_life.webflux.document.Usage;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
