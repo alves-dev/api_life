@@ -8,7 +8,7 @@ public class Message {
 	
 	
 	public Message(String id, String date_time, String chat_id, String first_name, String last_name,
-			String type_botinho, String type_message, String text) {
+			String type_botinho, String type_message, String text, String session) {
 		super();
 		this.id = id;
 		this.date_time = date_time;
@@ -18,6 +18,7 @@ public class Message {
 		this.type_botinho = type_botinho;
 		this.type_message = type_message;
 		this.text = text;
+		this.sesion = session;
 	}
 	
 	
@@ -30,6 +31,7 @@ public class Message {
 	private String type_botinho;
 	private String type_message;
 	private String text;
+	private String sesion;
 	
 	
 	public String getId() {
@@ -79,6 +81,12 @@ public class Message {
 	}
 	public void setText(String text) {
 		this.text = text;
+	}
+	public String getSesion() {
+		return sesion;
+	}
+	public void setSesion(String sesion) {
+		this.sesion = sesion;
 	}
 
     

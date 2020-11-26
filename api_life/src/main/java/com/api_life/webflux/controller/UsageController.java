@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.api_life.webflux.document.Usage;
 import com.api_life.webflux.services.UsageService;
+import com.mongodb.client.result.UpdateResult;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -31,13 +32,10 @@ public class UsageController {
 		return us.findById(id);
 	}
 	
+	
 	@PostMapping(value="/usage")
-	public Mono<Usage> save(@RequestBody Usage u){
-		return us.save(u);
+	public Mono<UpdateResult> upsert(@RequestBody Usage usage){
+		return us.upsert(usage);
 	}
 	
-	@GetMapping("/test")
-	public String test() {
-		return "bla";
-	}
 }
