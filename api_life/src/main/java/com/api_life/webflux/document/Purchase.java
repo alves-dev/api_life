@@ -4,10 +4,10 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
-public class purchase {
+public class Purchase {
 	
 		
-	public purchase(String id, String date, Double value, String code, String type, String description, Double amount,
+	public Purchase(String id, String date, Double value, String code, String type, String description, Double amount,
 			String establishment) {
 		super();
 		this.id = id;
